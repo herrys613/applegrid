@@ -3,8 +3,21 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apple Grid EV Chargers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple Grid EV Chargers | Sustainable EV Charging Solutions</title>
+  <meta name="title" content="Apple Grid EV Chargers | Sustainable EV Charging Solutions">
+  <meta name="description" content="Apple Grid provides innovative EV charging stations with flexible ownership models, designed for businesses and communities looking to support sustainable transportation.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Apple Grid EV Chargers | Sustainable EV Charging Solutions">
+  <meta property="og:description" content="Innovative EV charging stations for businesses and communities. Drive revenue, attract customers, and support a greener future with Apple Grid.">
+  <meta property="og:url" content="https://applegrid.com/">
+  <meta property="og:image" content="https://cdn.geekwire.com/wp-content/uploads/2023/08/Electric-Era-PowerNode-Charging-Station-Render.png">
+
+  <link rel="icon" type="image/png" href="/images/favicon.png" sizes="32x32">
+  <link rel="canonical" href="https://applegrid.com/">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,11 +44,6 @@
       }
     }
   </script>
-
-  <!-- Font Awesome 6 -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-
-  <!-- Favoured modern defaults -->
   <style>
     /* Smooth scrolling */
     html {
@@ -379,51 +387,43 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     // ROI Calculator
     document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("roiForm");
-
-  const ports = document.getElementById("ports");
-  const sessions = document.getElementById("sessions");
-  const kwh = document.getElementById("kwh");
-  const price = document.getElementById("price");
-  const cost = document.getElementById("cost");
-  const days = document.getElementById("days");
-
-  const grossEl = document.getElementById("gross");
-  const elecEl = document.getElementById("elec");
-  const netEl = document.getElementById("net");
-
-  const calcBtn = document.getElementById("calcBtn");
-
-  // Calculate ROI
-  calcBtn.addEventListener("click", () => {
-    const numPorts = parseFloat(ports.value) || 0;
-    const sessionsPerDay = parseFloat(sessions.value) || 0;
-    const kwhPerSession = parseFloat(kwh.value) || 0;
-    const pricePerKwh = parseFloat(price.value) || 0;
-    const costPerKwh = parseFloat(cost.value) || 0;
-    const operatingDays = parseFloat(days.value) || 0;
-
-    // Total monthly kWh used
-    const totalKwh = numPorts * sessionsPerDay * kwhPerSession * operatingDays;
-
-    // Gross revenue and electricity cost
-    const gross = totalKwh * pricePerKwh;
-    const elecCost = totalKwh * costPerKwh;
-    const net = gross - elecCost;
-
-    // Update results with formatting
-    grossEl.textContent = `$${gross.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
-    elecEl.textContent = `$${elecCost.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
-    netEl.textContent = `$${net.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
-  });
-
-  // Reset results when form resets
-  form.addEventListener("reset", () => {
-    grossEl.textContent = "$0";
-    elecEl.textContent = "$0";
-    netEl.textContent = "$0";
-  });
-});
+      const form = document.getElementById("roiForm");
+      const ports = document.getElementById("ports");
+      const sessions = document.getElementById("sessions");
+      const kwh = document.getElementById("kwh");
+      const price = document.getElementById("price");
+      const cost = document.getElementById("cost");
+      const days = document.getElementById("days");
+      const grossEl = document.getElementById("gross");
+      const elecEl = document.getElementById("elec");
+      const netEl = document.getElementById("net");
+      const calcBtn = document.getElementById("calcBtn");
+      // Calculate ROI
+      calcBtn.addEventListener("click", () => {
+        const numPorts = parseFloat(ports.value) || 0;
+        const sessionsPerDay = parseFloat(sessions.value) || 0;
+        const kwhPerSession = parseFloat(kwh.value) || 0;
+        const pricePerKwh = parseFloat(price.value) || 0;
+        const costPerKwh = parseFloat(cost.value) || 0;
+        const operatingDays = parseFloat(days.value) || 0;
+        // Total monthly kWh used
+        const totalKwh = numPorts * sessionsPerDay * kwhPerSession * operatingDays;
+        // Gross revenue and electricity cost
+        const gross = totalKwh * pricePerKwh;
+        const elecCost = totalKwh * costPerKwh;
+        const net = gross - elecCost;
+        // Update results with formatting
+        grossEl.textContent = `$${gross.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+        elecEl.textContent = `$${elecCost.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+        netEl.textContent = `$${net.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+      });
+      // Reset results when form resets
+      form.addEventListener("reset", () => {
+        grossEl.textContent = "$0";
+        elecEl.textContent = "$0";
+        netEl.textContent = "$0";
+      });
+    });
   </script>
 </body>
 
