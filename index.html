@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apple Grid EV Chargers</title>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#2E7D32', // Deep Green
+              secondary: '#66BB6A', // Leaf Green
+              accent: '#29B6F6', // Sky Blue
+              charcoal: '#333333', // Dark Charcoal
+              graybg: '#F5F5F5', // Light Gray
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.08)'
+          },
+          borderRadius: {
+            xl2: '1.25rem'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Favoured modern defaults -->
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* 2025 micro-interactions */
+    .card-hover {
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, .10);
+    }
+
+    .glass {
+      backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .75), rgba(255, 255, 255, .6));
+    }
+
+    .gradient-ring {
+      background: conic-gradient(from 180deg, #29B6F6, #66BB6A, #2E7D32, #29B6F6);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-brand-charcoal antialiased">
+  <!-- Top Bar -->
+  <div class="hidden w-full bg-brand-primary text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <p class="hidden sm:block">Powering the Future of Clean Transportation</p>
+      <a href="#contact" class="underline decoration-white/30 hover:decoration-white font-medium">Get a Quote</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-white/80 glass border-b border-black/5">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <span class="relative grid place-items-center w-10 h-10 rounded-xl overflow-hidden">
+          <span class="absolute inset-0 gradient-ring opacity-30"></span>
+          <span class="relative z-10 bg-brand-primary text-white w-8 h-8 rounded-lg grid place-items-center shadow-soft">
+            <i class="fa-solid fa-bolt"></i>
+          </span>
+        </span>
+        <span class="font-semibold tracking-tight text-lg">Apple Grid</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#features" class="hover:text-brand-primary">Features</a>
+        <a href="#why" class="hover:text-brand-primary">Why Apple Grid</a>
+        <a href="#incentives" class="hover:text-brand-primary">Incentives</a>
+        <a href="#roi" class="hover:text-brand-primary">ROI Calculator</a>
+        <a href="#contact" class="hover:text-brand-primary">Contact</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="menuBtn" class="p-2 rounded-lg border border-black/10 hover:bg-black/5" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <a href="#contact" class="hidden md:inline-flex items-center gap-2 bg-brand-primary text-white px-4 py-2 rounded-xl shadow-soft hover:bg-emerald-800 transition">
+        <i class="fa-solid fa-plug-circle-bolt"></i> <span>Install Chargers</span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-black/5 bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-4 grid gap-3 text-sm">
+        <a href="#features" class="py-2">Features</a>
+        <a href="#incentives" class="py-2">Incentives</a>
+        <a href="#roi" class="py-2">ROI Calculator</a>
+        <a href="#contact" class="py-2">Contact</a>
+        <a href="#contact" class="mt-2 inline-flex items-center gap-2 bg-brand-primary text-white px-4 py-2 rounded-xl shadow-soft">
+          <i class="fa-solid fa-plug-circle-bolt"></i> <span>Install Chargers</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute -inset-x-24 -top-24 h-72 bg-gradient-to-r from-brand-accent/20 via-brand-secondary/20 to-brand-primary/20 blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 pt-16 pb-24 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs text-brand-primary bg-brand-secondary/10 px-3 py-1 rounded-full mb-5">
+          <i class="fa-solid fa-leaf"></i>
+          <span>Clean • Smart • Scalable</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-semibold leading-tight tracking-tight">
+          Apple Grid EV Chargers
+          <span class="block text-brand-primary">Powering the Future</span>
+        </h1>
+        <p class="mt-5 text-brand-charcoal/80 max-w-xl">
+          State-of-the-art EV charging solutions for businesses, properties, and communities. Durable hardware. Easy software. Reliable charging for every EV.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#contact" class="inline-flex items-center gap-2 bg-brand-primary text-white px-5 py-3 rounded-xl shadow-soft hover:bg-emerald-800">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Request Installation</span>
+          </a>
+          <a href="#features" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-black/10 hover:bg-black/5">
+            <i class="fa-solid fa-circle-play"></i>
+            <span>See Features</span>
+          </a>
+        </div>
+        <div class="mt-8 flex items-center gap-6 text-sm text-brand-charcoal/70">
+          <span class="inline-flex items-center gap-2"><i class="fa-solid fa-shield-halved text-brand-primary"></i> Safety Certified</span>
+          <span class="inline-flex items-center gap-2"><i class="fa-solid fa-cloud text-brand-accent"></i> Cloud Managed</span>
+          <span class="inline-flex items-center gap-2"><i class="fa-solid fa-plug text-brand-secondary"></i> All EVs</span>
+        </div>
+      </div>
+
+      <div class="relative px-4">
+        <div class="relative rounded-2xl shadow-soft overflow-hidden border border-black/5">
+          <img src="https://cdn.geekwire.com/wp-content/uploads/2023/08/Electric-Era-PowerNode-Charging-Station-Render.png" alt="EV Charging" class="w-full h-[380px] object-cover" />
+        </div>
+        <div class="absolute -bottom-6 -left-1 bg-white rounded-2xl shadow-soft p-4 border border-black/5 flex items-center gap-4">
+          <span class="text-brand-primary text-2xl"><i class="fa-solid fa-gauge-high"></i></span>
+          <div>
+            <p class="font-semibold leading-none">DC Fast Ready</p>
+            <p class="text-sm text-brand-charcoal/70">High power. Low wait.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="bg-brand-graybg/60 py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-2xl mb-12">
+        <h2 class="text-3xl font-semibold tracking-tight">Key Features</h2>
+        <p class="mt-3 text-brand-charcoal/80">Built with cutting-edge tech, durable hardware, and software that just works.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Feature Card -->
+        <article class="card-hover bg-white rounded-2xl p-6 border border-black/5">
+          <div class="text-brand-primary text-2xl mb-4"><i class="fa-solid fa-bolt"></i></div>
+          <h3 class="font-semibold mb-2">Fast & Reliable Charging</h3>
+          <p class="text-sm text-brand-charcoal/80">From Level 2 workplace chargers to high-power DC fast chargers — scalable for every site.</p>
+        </article>
+
+        <article class="card-hover bg-white rounded-2xl p-6 border border-black/5">
+          <div class="text-brand-accent text-2xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 class="font-semibold mb-2">Smart Management</h3>
+          <p class="text-sm text-brand-charcoal/80">Real-time monitoring, usage reporting, remote management, and alerts in one dashboard.</p>
+        </article>
+
+        <article class="card-hover bg-white rounded-2xl p-6 border border-black/5">
+          <div class="text-brand-accent text-2xl mb-4"><i class="fa-solid fa-shield-alt"></i></div>
+          <h3 class="font-semibold mb-2">Durability & Safety</h3>
+          <p class="text-sm text-brand-charcoal/80">All-weather enclosures, rigorous safety certifications, and vandal-resistant design.</p>
+        </article>
+      </div>
+      <div class="mt-12 bg-brand-graybg/80 border border-black/5 rounded-2xl p-6 flex items-start gap-4">
+        <div class="text-brand-primary text-xl"><i class="fa-solid fa-circle-info"></i></div>
+        <p class="text-sm text-brand-charcoal/80">With Apple Grid EV Chargers, you don’t just install equipment — you invest in a cleaner, smarter, more profitable future.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <div class="max-w-7xl mx-auto px-4">
+
+  </div>
+  </section>
+
+  <!-- Incentives Banner -->
+  <section id="incentives" class="relative py-16">
+    <div class="absolute inset-0 -z-10 opacity-20 bg-[radial-gradient(circle_at_20%_20%,#29B6F6,transparent_30%),radial-gradient(circle_at_80%_30%,#66BB6A,transparent_30%),radial-gradient(circle_at_50%_80%,#2E7D32,transparent_30%)]"></div>
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="rounded-2xl border border-black/5 bg-white p-8 shadow-soft flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 class="text-2xl font-semibold">Rebates & Incentives</h3>
+          <p class="mt-2 text-brand-charcoal/80 max-w-2xl">We’ll help you navigate federal, state, and utility programs to reduce upfront cost and accelerate ROI.</p>
+        </div>
+        <a href="#contact" class="inline-flex items-center gap-2 bg-brand-primary text-white px-5 py-3 rounded-xl shadow-soft hover:bg-emerald-800">
+          <i class="fa-solid fa-file-invoice-dollar"></i>
+          <span>Check Eligibility</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI Calculator -->
+  <section id="roi" class="py-20 bg-brand-graybg/60">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-2xl mb-10">
+        <h2 class="text-3xl font-semibold tracking-tight">Simple ROI Estimator</h2>
+        <p class="mt-3 text-brand-charcoal/80">Estimate monthly revenue and net after electricity costs. (For illustration only.)</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <form id="roiForm" class="bg-white rounded-2xl p-6 border border-black/5 shadow-soft grid sm:grid-cols-2 gap-4">
+          <label class="grid gap-1 text-sm">
+            <span>Number of Ports</span>
+            <input type="number" min="1" value="4" id="ports" class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+          </label>
+          <label class="grid gap-1 text-sm">
+            <span>Sessions per Port / Day</span>
+            <input type="number" min="0" step="0.1" value="6" id="sessions" class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+          </label>
+          <label class="grid gap-1 text-sm">
+            <span>kWh per Session</span>
+            <input type="number" min="0" step="0.1" value="22" id="kwh" class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+          </label>
+          <label class="grid gap-1 text-sm">
+            <span>Price to Driver ($/kWh)</span>
+            <input type="number" min="0" step="0.01" value="0.39" id="price" class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+          </label>
+          <label class="grid gap-1 text-sm">
+            <span>Electricity Cost ($/kWh)</span>
+            <input type="number" min="0" step="0.01" value="0.17" id="cost" class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+          </label>
+          <label class="grid gap-1 text-sm">
+            <span>Operating Days / Month</span>
+            <input type="number" min="1" max="31" value="30" id="days" class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+          </label>
+          <div class="sm:col-span-2 flex items-center gap-3 pt-2">
+            <button type="button" id="calcBtn" class="inline-flex items-center gap-2 bg-brand-primary text-white px-5 py-3 rounded-xl shadow-soft hover:bg-emerald-800">
+              <i class="fa-solid fa-calculator"></i>
+              <span>Calculate</span>
+            </button>
+            <button type="reset" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-black/10 hover:bg-black/5">
+              <i class="fa-solid fa-rotate-left"></i>
+              <span>Reset</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="bg-white rounded-2xl p-6 border border-black/5 shadow-soft grid gap-4">
+          <div class="flex items-center gap-3">
+            <span class="text-brand-primary text-2xl"><i class="fa-solid fa-wallet"></i></span>
+            <h3 class="font-semibold text-xl">Results</h3>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4 text-sm">
+            <div class="p-4 rounded-xl bg-brand-graybg/80 border border-black/5">
+              <p class="text-brand-charcoal/60">Gross Monthly Revenue</p>
+              <p id="gross" class="text-2xl font-semibold mt-1">$0</p>
+            </div>
+            <div class="p-4 rounded-xl bg-brand-graybg/80 border border-black/5">
+              <p class="text-brand-charcoal/60">Monthly Electricity Cost</p>
+              <p id="elec" class="text-2xl font-semibold mt-1">$0</p>
+            </div>
+            <div class="p-4 rounded-xl bg-brand-graybg/80 border border-black/5 sm:col-span-2">
+              <p class="text-brand-charcoal/60">Estimated Net (Before O&M)</p>
+              <p id="net" class="text-3xl font-semibold mt-1 text-brand-primary">$0</p>
+            </div>
+          </div>
+          <p class="text-xs text-brand-charcoal/70">Assumes even utilization across ports. Excludes demand charges, networking, and maintenance. For planning purposes only.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section id="contact" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="rounded-2xl border border-black/5 bg-white p-8 shadow-soft grid lg:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-3xl font-semibold tracking-tight">Bring EV Charging to Your Site</h2>
+          <p class="mt-3 text-brand-charcoal/80">Tell us about your property and goals — we’ll tailor a solution and estimate incentives in your area.</p>
+          <ul class="mt-6 grid gap-3 text-sm">
+            <li class="inline-flex items-center gap-3"><i class="fa-solid fa-clipboard-check text-brand-primary"></i> Site assessment & layout</li>
+            <li class="inline-flex items-center gap-3"><i class="fa-solid fa-plug-circle-bolt text-brand-secondary"></i> Hardware + software bundle</li>
+            <li class="inline-flex items-center gap-3"><i class="fa-solid fa-file-signature text-brand-accent"></i> Rebate paperwork assistance</li>
+          </ul>
+        </div>
+        <form class="grid grid-cols-2 gap-4">
+          <input class="col-span-2 sm:col-span-1 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" placeholder="Full Name" />
+          <input class="col-span-2 sm:col-span-1 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" placeholder="Email" />
+          <input class="col-span-2 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" placeholder="Company / Property" />
+          <select class="col-span-2 px-3 py-3 rounded-xl border border-black/10 bg-white focus:outline-none focus:ring-2 focus:ring-brand-accent">
+            <option>Property Type</option>
+            <option>Commercial Office</option>
+            <option>Retail / Hospitality</option>
+            <option>Multifamily</option>
+            <option>Municipal / Campus</option>
+            <option>Fleet / Depot</option>
+          </select>
+          <textarea rows="4" class="col-span-2 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" placeholder="What are you looking to build? (e.g., 6 Level 2 ports + 1 DCFC)"></textarea>
+          <button class="col-span-2 inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-5 py-3 rounded-xl shadow-soft hover:bg-emerald-800">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Request a Quote</span>
+          </button>
+          <p class="col-span-2 text-xs text-brand-charcoal/70">By submitting, you agree to be contacted about Apple Grid services.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-black/5 bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8 text-sm">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="bg-brand-primary text-white w-9 h-9 rounded-lg grid place-items-center"><i class="fa-solid fa-bolt"></i></div>
+          <span class="font-semibold">Apple Grid</span>
+        </div>
+        <p class="text-brand-charcoal/70 max-w-md">Clean, smart, and scalable EV charging solutions for properties, fleets, and communities.</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Explore</p>
+        <ul class="grid gap-2 text-brand-charcoal/80">
+          <li><a href="#features" class="hover:text-brand-primary">Features</a></li>
+          <li><a href="#incentives" class="hover:text-brand-primary">Incentives</a></li>
+          <li><a href="#roi" class="hover:text-brand-primary">ROI Calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-semibold mb-3">Contact</p>
+        <ul class="grid gap-2 text-brand-charcoal/80">
+          <li class="inline-flex items-center gap-2"><i class="fa-solid fa-envelope"></i> hello@applegrid.example</li>
+          <li class="inline-flex items-center gap-2"><i class="fa-solid fa-phone"></i> (555) 123‑4567</li>
+          <li class="inline-flex items-center gap-2"><i class="fa-solid fa-location-dot"></i> Your City, USA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-black/5">
+      <div class="max-w-7xl mx-auto px-4 py-4 text-xs text-brand-charcoal/60 flex items-center justify-between">
+        <p>© <span id="year"></span> Apple Grid. All rights reserved.</p>
+        <a href="#" class="hover:text-brand-primary">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal JS -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // ROI Calculator
+    document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("roiForm");
+
+  const ports = document.getElementById("ports");
+  const sessions = document.getElementById("sessions");
+  const kwh = document.getElementById("kwh");
+  const price = document.getElementById("price");
+  const cost = document.getElementById("cost");
+  const days = document.getElementById("days");
+
+  const grossEl = document.getElementById("gross");
+  const elecEl = document.getElementById("elec");
+  const netEl = document.getElementById("net");
+
+  const calcBtn = document.getElementById("calcBtn");
+
+  // Calculate ROI
+  calcBtn.addEventListener("click", () => {
+    const numPorts = parseFloat(ports.value) || 0;
+    const sessionsPerDay = parseFloat(sessions.value) || 0;
+    const kwhPerSession = parseFloat(kwh.value) || 0;
+    const pricePerKwh = parseFloat(price.value) || 0;
+    const costPerKwh = parseFloat(cost.value) || 0;
+    const operatingDays = parseFloat(days.value) || 0;
+
+    // Total monthly kWh used
+    const totalKwh = numPorts * sessionsPerDay * kwhPerSession * operatingDays;
+
+    // Gross revenue and electricity cost
+    const gross = totalKwh * pricePerKwh;
+    const elecCost = totalKwh * costPerKwh;
+    const net = gross - elecCost;
+
+    // Update results with formatting
+    grossEl.textContent = `$${gross.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+    elecEl.textContent = `$${elecCost.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+    netEl.textContent = `$${net.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+  });
+
+  // Reset results when form resets
+  form.addEventListener("reset", () => {
+    grossEl.textContent = "$0";
+    elecEl.textContent = "$0";
+    netEl.textContent = "$0";
+  });
+});
+  </script>
+</body>
+
+</html>
