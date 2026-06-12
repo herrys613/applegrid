@@ -170,6 +170,14 @@
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
+        /* ===== INCENTIVES SECTION ===== */
+        .incentives-grid {
+            background-image:
+                linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+
         /* ===== SHIMMER BUTTON ===== */
         .shimmer-btn { position: relative; overflow: hidden; }
         .shimmer-btn::after {
@@ -218,7 +226,7 @@
             </div>
 
             <a href="#contact"
-                class="shimmer-btn hidden md:inline-flex items-center gap-2 bg-brand-primary text-white px-4 py-2 rounded-xl shadow-soft hover:bg-emerald-800 transition">
+                class="hidden md:inline-flex items-center gap-2 bg-brand-primary text-white px-4 py-2 rounded-xl shadow-soft hover:bg-emerald-800 transition">
                 <i class="fa-solid fa-plug-circle-bolt"></i> <span>Install Chargers</span>
             </a>
         </div>
@@ -241,6 +249,7 @@
     <!-- Hero -->
     <section id="hero" class="relative overflow-hidden">
         <div class="aurora-bg"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-b from-transparent to-white pointer-events-none z-20"></div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 pt-16 pb-24 grid lg:grid-cols-2 gap-10 items-center">
             <div>
@@ -296,7 +305,7 @@
     </section>
 
     <!-- Features -->
-    <section id="features" class="dot-grid bg-brand-graybg/60 py-20">
+    <section id="features" class="bg-white py-5">
         <div class="max-w-7xl mx-auto px-4">
             <div class="max-w-2xl mb-12">
                 <h2 class="text-3xl font-semibold tracking-tight">Key Features</h2>
@@ -306,191 +315,169 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Feature Card -->
-                <article class="reveal reveal-d1 spotlight-card card-hover bg-white rounded-2xl p-6 border border-black/5">
-                    <div class="card-icon text-brand-primary text-2xl mb-4"><i class="fa-solid fa-bolt"></i></div>
-                    <h3 class="font-semibold mb-2">Level 2 to DCFC — your call</h3>
-                    <p class="text-sm text-brand-charcoal/80">We size the install to your actual traffic. A 7.2 kW workplace charger or a 150 kW DC fast unit — no upselling hardware you won’t use.</p>
+                <article class="reveal reveal-d1 group card-hover rounded-2xl overflow-hidden border border-black/8 relative h-72">
+                    <img src="/images/Fast & Reliable Charg.png" alt="EV Charging" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
+                        <div class="text-xl mb-1.5"><i class="fa-solid fa-bolt"></i></div>
+                        <h3 class="font-semibold text-base mb-1">Fast & Reliable Charging</h3>
+                        <p class="text-xs text-white/75 leading-relaxed">From Level 2 workplace chargers to high-power DC fast chargers — scalable for every site.</p>
+                    </div>
                 </article>
 
-                <article class="reveal reveal-d2 spotlight-card card-hover bg-white rounded-2xl p-6 border border-black/5">
-                    <div class="card-icon text-brand-accent text-2xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3 class="font-semibold mb-2">See every session, from anywhere</h3>
-                    <p class="text-sm text-brand-charcoal/80">Check live usage, pull billing reports, restart a port remotely. One tab — not a training course.</p>
+                <article class="reveal reveal-d2 group card-hover rounded-2xl overflow-hidden border border-black/8 relative h-72">
+                    <img src="/images/Smart Management.png" alt="Smart Management" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
+                        <div class="text-xl mb-1.5"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3 class="font-semibold text-base mb-1">Smart Management</h3>
+                        <p class="text-xs text-white/75 leading-relaxed">Real-time monitoring, usage reporting, remote management, and alerts in one dashboard.</p>
+                    </div>
                 </article>
 
-                <article class="reveal reveal-d3 spotlight-card card-hover bg-white rounded-2xl p-6 border border-black/5">
-                    <div class="card-icon text-brand-accent text-2xl mb-4"><i class="fa-solid fa-shield-alt"></i></div>
-                    <h3 class="font-semibold mb-2">Built for parking lots, not showrooms</h3>
-                    <p class="text-sm text-brand-charcoal/80">IP54-rated, UL-listed hardware that doesn’t care about door dings, rain, or a rough winter. It just keeps charging.</p>
+                <article class="reveal reveal-d3 group card-hover rounded-2xl overflow-hidden border border-black/8 relative h-72">
+                    <img src="/images/Durability & Safety.png" alt="Durability" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
+                        <div class="text-xl mb-1.5"><i class="fa-solid fa-shield-alt"></i></div>
+                        <h3 class="font-semibold text-base mb-1">Durability & Safety</h3>
+                        <p class="text-xs text-white/75 leading-relaxed">All-weather enclosures, rigorous safety certifications, and vandal-resistant design.</p>
+                    </div>
                 </article>
-            </div>
-            <div class="reveal features-banner mt-12 rounded-2xl p-6 flex items-start gap-4">
-                <div class="text-brand-primary text-xl"><i class="fa-solid fa-circle-info"></i></div>
-                <p class="text-sm text-brand-charcoal/80">Most sites are operational within 6–8 weeks of signing. We handle permitting, utility coordination, and installation — you hand us a parking lot, we hand you a working charger.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Why Choose -->
-    <div class="max-w-7xl mx-auto px-4">
-
-    </div>
     </section>
 
     <!-- Incentives Banner -->
-    <section id="incentives" class="relative py-16">
-        <div
-            class="absolute inset-0 -z-10 opacity-20 bg-[radial-gradient(circle_at_20%_20%,#29B6F6,transparent_30%),radial-gradient(circle_at_80%_30%,#66BB6A,transparent_30%),radial-gradient(circle_at_50%_80%,#2E7D32,transparent_30%)]">
-        </div>
-        <div class="max-w-7xl mx-auto px-4">
-            <div
-                class="reveal rounded-2xl border border-black/5 bg-white p-8 shadow-soft flex flex-col md:flex-row items-center justify-between gap-6">
-                <div>
-                    <h3 class="text-2xl font-semibold">Rebates & Incentives</h3>
-                    <p class="mt-2 text-brand-charcoal/80 max-w-2xl">We’ll help you navigate federal, state, and utility
-                        programs to reduce upfront cost and accelerate ROI.</p>
-                </div>
-                <a href="#contact"
-                    class="inline-flex items-center gap-2 bg-brand-primary text-white px-5 py-3 rounded-xl shadow-soft hover:bg-emerald-800">
-                    <i class="fa-solid fa-file-invoice-dollar"></i>
-                    <span>Check Eligibility</span>
-                </a>
-            </div>
+    <section id="incentives" class="relative py-28 bg-white overflow-hidden">
+        <div class="incentives-grid absolute inset-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent to-white/80"></div>
+
+        <div class="reveal relative z-10 max-w-3xl mx-auto px-4 text-center">
+            <p class="text-brand-accent text-xs font-semibold tracking-widest uppercase mb-5">Rebates & Incentives</p>
+            <h2 class="text-4xl sm:text-5xl font-semibold text-brand-charcoal leading-tight">
+                Less paperwork. More rebates.
+                <span class="text-brand-primary"> We handle both.</span>
+            </h2>
+            <p class="mt-6 text-brand-charcoal/60 text-lg max-w-xl mx-auto leading-relaxed">
+                We navigate federal tax credits, state rebates, and utility incentives on your behalf — so you capture every dollar you’re entitled to.
+            </p>
+            <a href="#contact"
+                class="mt-10 inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-xl shadow-soft hover:bg-emerald-700 transition">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <span>Check Your Eligibility</span>
+            </a>
         </div>
     </section>
 
     <!-- ROI Calculator -->
-    <section id="roi" class="py-20 bg-brand-graybg/60">
+    <!-- ROI + Contact side by side -->
+    <section class="py-20 bg-gradient-to-br from-green-50/30 to-sky-50/30">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="max-w-2xl mb-10">
-                <h2 class="text-3xl font-semibold tracking-tight">Simple ROI Estimator</h2>
-                <p class="mt-3 text-brand-charcoal/80">Estimate monthly revenue and net after electricity costs. (For
-                    illustration only.)</p>
-            </div>
+            <div class="reveal grid lg:grid-cols-2 gap-20 items-center">
 
-            <div class="grid lg:grid-cols-2 gap-8">
-                <form id="roiForm"
-                    class="reveal reveal-d1 bg-white rounded-2xl p-6 border border-black/5 shadow-soft grid sm:grid-cols-2 gap-4">
-                    <label class="grid gap-1 text-sm">
-                        <span>Number of Ports</span>
-                        <input type="number" min="1" value="4" id="ports"
-                            class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
-                    </label>
-                    <label class="grid gap-1 text-sm">
-                        <span>Sessions per Port / Day</span>
-                        <input type="number" min="0" step="0.1" value="6" id="sessions"
-                            class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
-                    </label>
-                    <label class="grid gap-1 text-sm">
-                        <span>kWh per Session</span>
-                        <input type="number" min="0" step="0.1" value="22" id="kwh"
-                            class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
-                    </label>
-                    <label class="grid gap-1 text-sm">
-                        <span>Price to Driver ($/kWh)</span>
-                        <input type="number" min="0" step="0.01" value="0.39" id="price"
-                            class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
-                    </label>
-                    <label class="grid gap-1 text-sm">
-                        <span>Electricity Cost ($/kWh)</span>
-                        <input type="number" min="0" step="0.01" value="0.17" id="cost"
-                            class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
-                    </label>
-                    <label class="grid gap-1 text-sm">
-                        <span>Operating Days / Month</span>
-                        <input type="number" min="1" max="31" value="30" id="days"
-                            class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
-                    </label>
-                    <div class="sm:col-span-2 flex items-center gap-3 pt-2">
-                        <button type="button" id="calcBtn"
-                            class="inline-flex items-center gap-2 bg-brand-primary text-white px-5 py-3 rounded-xl shadow-soft hover:bg-emerald-800">
-                            <i class="fa-solid fa-calculator"></i>
-                            <span>Calculate</span>
-                        </button>
-                        <button type="reset"
-                            class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-black/10 hover:bg-black/5">
-                            <i class="fa-solid fa-rotate-left"></i>
-                            <span>Reset</span>
-                        </button>
-                    </div>
-                </form>
+                <!-- ROI Calculator (left, no card) -->
+                <div id="roi" class="self-center">
+                    <h2 class="text-3xl font-semibold tracking-tight">Simple ROI Estimator</h2>
+                    <p class="mt-2 text-brand-charcoal/80 text-sm">Estimate monthly revenue and net after electricity costs. (For illustration only.)</p>
 
-                <div class="reveal reveal-d2 bg-white rounded-2xl p-6 border border-black/5 shadow-soft grid gap-4">
-                    <div class="flex items-center gap-3">
-                        <span class="text-brand-primary text-2xl"><i class="fa-solid fa-wallet"></i></span>
-                        <h3 class="font-semibold text-xl">Results</h3>
-                    </div>
-                    <div class="grid sm:grid-cols-2 gap-4 text-sm">
-                        <div class="p-4 rounded-xl bg-brand-graybg/80 border border-black/5">
-                            <p class="text-brand-charcoal/60">Gross Monthly Revenue</p>
-                            <p id="gross" class="text-2xl font-semibold mt-1">$0</p>
+                    <form id="roiForm" class="mt-6">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <label class="grid gap-1 text-sm">
+                                <span>Number of Ports</span>
+                                <input type="number" min="1" value="4" id="ports"
+                                    class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+                            </label>
+                            <label class="grid gap-1 text-sm">
+                                <span>Sessions per Port / Day</span>
+                                <input type="number" min="0" step="0.1" value="6" id="sessions"
+                                    class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+                            </label>
+                            <label class="grid gap-1 text-sm">
+                                <span>kWh per Session</span>
+                                <input type="number" min="0" step="0.1" value="22" id="kwh"
+                                    class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+                            </label>
+                            <label class="grid gap-1 text-sm">
+                                <span>Price to Driver ($/kWh)</span>
+                                <input type="number" min="0" step="0.01" value="0.39" id="price"
+                                    class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+                            </label>
+                            <label class="grid gap-1 text-sm">
+                                <span>Electricity Cost ($/kWh)</span>
+                                <input type="number" min="0" step="0.01" value="0.17" id="cost"
+                                    class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+                            </label>
+                            <label class="grid gap-1 text-sm">
+                                <span>Operating Days / Month</span>
+                                <input type="number" min="1" max="31" value="30" id="days"
+                                    class="px-3 py-2 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+                            </label>
                         </div>
-                        <div class="p-4 rounded-xl bg-brand-graybg/80 border border-black/5">
-                            <p class="text-brand-charcoal/60">Monthly Electricity Cost</p>
-                            <p id="elec" class="text-2xl font-semibold mt-1">$0</p>
+                        <div class="flex items-center gap-3 mt-5">
+                            <button type="button" id="calcBtn"
+                                class="inline-flex items-center gap-2 bg-brand-primary text-white px-5 py-2.5 rounded-xl shadow-soft hover:bg-emerald-800">
+                                <i class="fa-solid fa-calculator"></i>
+                                <span>Calculate</span>
+                            </button>
+                            <button type="reset"
+                                class="inline-flex items-center bg-white gap-2 px-5 py-2.5 rounded-xl border border-black/10 hover:bg-black/5 text-sm">
+                                <i class="fa-solid fa-rotate-left"></i>
+                                <span>Reset</span>
+                            </button>
                         </div>
-                        <div class="p-4 rounded-xl bg-brand-graybg/80 border border-black/5 sm:col-span-2">
-                            <p class="text-brand-charcoal/60">Estimated Net (Before O&M)</p>
-                            <p id="net" class="text-3xl font-semibold mt-1 text-brand-primary">$0</p>
+                        <div class="mt-6 pt-5 border-t border-black/6 grid grid-cols-3 gap-4">
+                            <div>
+                                <p class="text-xs text-brand-charcoal/50 mb-0.5">Gross Revenue</p>
+                                <p id="gross" class="text-xl font-semibold">$0</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-brand-charcoal/50 mb-0.5">Electricity Cost</p>
+                                <p id="elec" class="text-xl font-semibold">$0</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-brand-charcoal/50 mb-0.5">Est. Net</p>
+                                <p id="net" class="text-xl font-semibold text-brand-primary">$0</p>
+                            </div>
                         </div>
-                    </div>
-                    <p class="text-xs text-brand-charcoal/70">Assumes even utilization across ports. Excludes demand
-                        charges, networking, and maintenance. For planning purposes only.</p>
+                        <p class="mt-3 text-xs text-brand-charcoal/40">Assumes even utilization. Excludes demand charges, networking, and maintenance. For planning purposes only.</p>
+                    </form>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact / CTA -->
-    <section id="contact" class="py-20">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="reveal rounded-2xl border border-black/5 bg-white p-8 shadow-soft grid lg:grid-cols-2 gap-8">
-                <div>
+                <!-- Contact (right, in card) -->
+                <div id="contact" class="bg-white rounded-2xl p-8 border border-black/5 shadow-soft">
                     <h2 class="text-3xl font-semibold tracking-tight">Bring EV Charging to Your Site</h2>
-                    <p class="mt-3 text-brand-charcoal/80">Tell us about your property and goals — we’ll tailor a
-                        solution and estimate incentives in your area.</p>
-                    <ul class="mt-6 grid gap-3 text-sm">
-                        <li class="inline-flex items-center gap-3"><i
-                                class="fa-solid fa-clipboard-check text-brand-primary"></i> Site assessment & layout
-                        </li>
-                        <li class="inline-flex items-center gap-3"><i
-                                class="fa-solid fa-plug-circle-bolt text-brand-secondary"></i> Hardware + software
-                            bundle</li>
-                        <li class="inline-flex items-center gap-3"><i
-                                class="fa-solid fa-file-signature text-brand-accent"></i> Rebate paperwork assistance
-                        </li>
+                    <p class="mt-2 text-brand-charcoal/80 text-sm">Tell us about your property and goals — we’ll tailor a solution and estimate incentives in your area.</p>
+                    <ul class="mt-4 grid gap-2 text-sm">
+                        <li class="inline-flex items-center gap-3"><i class="fa-solid fa-clipboard-check text-brand-primary"></i> Site assessment & layout</li>
+                        <li class="inline-flex items-center gap-3"><i class="fa-solid fa-plug-circle-bolt text-brand-secondary"></i> Hardware + software bundle</li>
+                        <li class="inline-flex items-center gap-3"><i class="fa-solid fa-file-signature text-brand-accent"></i> Rebate paperwork assistance</li>
                     </ul>
+                    <form class="mt-6 grid grid-cols-2 gap-4" action="https://formsubmit.co/office@applegrid.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Quote Request — Apple Grid" />
+                        <input type="hidden" name="_captcha" value="false" />
+                        <input type="hidden" name="_template" value="basic" />
+                        <input type="hidden" name="_next" value="https://applegrid.com/">
+                        <input name="full_name" required class="col-span-2 sm:col-span-1 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" placeholder="Full Name" />
+                        <input name="email" type="email" required class="col-span-2 sm:col-span-1 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" placeholder="Email" />
+                        <input name="company" class="col-span-2 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" placeholder="Company / Property" />
+                        <select name="property_type" class="col-span-2 px-3 py-3 rounded-xl border border-black/10 bg-white focus:outline-none focus:ring-2 focus:ring-brand-accent">
+                            <option value="">Property Type</option>
+                            <option>Commercial Office</option>
+                            <option>Retail / Hospitality</option>
+                            <option>Multifamily</option>
+                            <option>Municipal / Campus</option>
+                            <option>Fleet / Depot</option>
+                        </select>
+                        <textarea name="message" rows="4" class="col-span-2 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent" placeholder="What are you looking to build? (e.g., 6 Level 2 ports + 1 DCFC)"></textarea>
+                        <button type="submit" class="col-span-2 inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-5 py-3 rounded-xl shadow-soft hover:bg-emerald-800">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Request a Quote</span>
+                        </button>
+                        <p class="col-span-2 text-xs text-brand-charcoal/70">By submitting, you agree to be contacted about Apple Grid services.</p>
+                    </form>
                 </div>
-                <form class="grid grid-cols-2 gap-4">
-                    <input
-                        class="col-span-2 sm:col-span-1 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent"
-                        placeholder="Full Name" />
-                    <input
-                        class="col-span-2 sm:col-span-1 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent"
-                        placeholder="Email" />
-                    <input
-                        class="col-span-2 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent"
-                        placeholder="Company / Property" />
-                    <select
-                        class="col-span-2 px-3 py-3 rounded-xl border border-black/10 bg-white focus:outline-none focus:ring-2 focus:ring-brand-accent">
-                        <option>Property Type</option>
-                        <option>Commercial Office</option>
-                        <option>Retail / Hospitality</option>
-                        <option>Multifamily</option>
-                        <option>Municipal / Campus</option>
-                        <option>Fleet / Depot</option>
-                    </select>
-                    <textarea rows="4"
-                        class="col-span-2 px-3 py-3 rounded-xl border border-black/10 focus:outline-none focus:ring-2 focus:ring-brand-accent"
-                        placeholder="What are you looking to build? (e.g., 6 Level 2 ports + 1 DCFC)"></textarea>
-                    <button
-                        class="col-span-2 inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-5 py-3 rounded-xl shadow-soft hover:bg-emerald-800">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        <span>Request a Quote</span>
-                    </button>
-                    <p class="col-span-2 text-xs text-brand-charcoal/70">By submitting, you agree to be contacted about
-                        Apple Grid services.</p>
-                </form>
+
             </div>
         </div>
     </section>
@@ -533,6 +520,10 @@
 
     <!-- Minimal JS -->
     <script>
+        // Always start at top on reload
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+
         // ===== SPOTLIGHT CARDS =====
         document.querySelectorAll('.spotlight-card').forEach(card => {
             card.addEventListener('mousemove', e => {
@@ -607,13 +598,10 @@
                 const pricePerKwh = parseFloat(price.value) || 0;
                 const costPerKwh = parseFloat(cost.value) || 0;
                 const operatingDays = parseFloat(days.value) || 0;
-                // Total monthly kWh used
                 const totalKwh = numPorts * sessionsPerDay * kwhPerSession * operatingDays;
-                // Gross revenue and electricity cost
                 const gross = totalKwh * pricePerKwh;
                 const elecCost = totalKwh * costPerKwh;
                 const net = gross - elecCost;
-                // Update results with formatting
                 grossEl.textContent = `$${gross.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
                 elecEl.textContent = `$${elecCost.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
                 netEl.textContent = `$${net.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
